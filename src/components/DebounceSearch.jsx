@@ -11,13 +11,13 @@ function DebounceSearch() {
     if (debouncedValue) {
       console.log(`Searching for: ${debouncedValue}`);
     }
-  },[debouncedValue]);
+  }, [debouncedValue]);
 
   return (
     <div>
       <h2>Debounce Search</h2>
       <label>
-        Debounce Delay(ms): {""}
+        Debounce Delay(ms): {" "}
         <input
           type="number"
           value={delay}
@@ -27,16 +27,18 @@ function DebounceSearch() {
       </label>
       <br/>
       <label>
-        Type to search: {""}
+        Type to search: {" "}
         <input
         type="text"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         />
       </label>
-      <p>Current Input:{inputValue}</p>
-      <p>Debounced Value (after {delay}ms):{debouncedValue}</p>
+      <p>Current Input: {inputValue}</p>
+      <p>Debounced Value (after {delay}ms): {debouncedValue}</p>
       <p>Simulated Search Results: {debouncedValue || "Type to see results."}</p>
     </div>
   );
 }
+
+export default DebounceSearch;
