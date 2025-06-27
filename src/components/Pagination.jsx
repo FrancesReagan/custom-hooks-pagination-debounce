@@ -5,7 +5,7 @@
 import React from "react";
 import usePagination from "../hooks/usePagination";
 
-const PaginationDemo = () => {
+const Pagination = () => {
   // this will simulate 123 items//
   const items = Array.from({ length: 123 }, (_, i)  => `Item ${i + 1}`);
   const {
@@ -56,7 +56,7 @@ const PaginationDemo = () => {
 
       <div>
         <p>Jump to page: </p>
-        <div style= {{ display: "flex", flexWrap: "wrap", gap: "5px" }}> {
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "5px" }}>
         {Array.from({ length: totalPages }, (_,i) => i + 1).map((page) => (
           <button
             key={page}
