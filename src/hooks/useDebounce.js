@@ -19,7 +19,7 @@ return () => {
 // re-run when value or delay changes//
   },[value,delay]);
 
-  
-
-  })
+  return debounceValue;
 }
+
+export default useDebounce;
