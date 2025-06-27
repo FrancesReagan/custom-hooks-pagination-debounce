@@ -20,14 +20,14 @@ const PaginationDemo = () => {
     canNextPage,
     canPrevPage
     
-  } = usePagination ({
+  } = usePagination({
     totalItems: items.length,
     itemsPerPage: 10,
     initialPage: 1,
 });
   
   // get current page's items//
-  const currentItems = itemslice(startIndex, endIndex + 1);
+  const currentItems = items.slice(startIndex, endIndex + 1);
 
   return (
     <div style={{ padding: "20px"}}>
@@ -56,8 +56,8 @@ const PaginationDemo = () => {
 
       <div>
         <p>Jump to page: </p>
+        <div style= {{ display: "flex", flexWrap: "wrap", gap: "5px" }}> {
         {Array.from({ length: totalPages }, (_,i) => i + 1).map((page) => (
-          <div>
           <button
             key={page}
             onClick={() => setPage(page)}
@@ -66,9 +66,8 @@ const PaginationDemo = () => {
             >
               {page}
             </button>
-      </div>
         ))}
-      
+      </div>
       </div>
     </div>
 
