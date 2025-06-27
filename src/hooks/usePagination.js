@@ -75,5 +75,5 @@ return {
 
 
 
-};
+}
 export default usePagination;
